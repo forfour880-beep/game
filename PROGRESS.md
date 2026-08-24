@@ -1,56 +1,63 @@
 # GAME DEVELOPMENT CHECKPOINT
 
 ## Current Status
-Neon Void playable implementation completed on `game-dev`. Production deployment is blocked by the available Vercel connector: the connected Vercel account currently has no projects and the deployment action requires a local project file payload that this session cannot materialize from GitHub.
+Neon Void is deployed to Vercel production and the latest deployment is READY. The current main branch contains the cleaned, typed arena-survival implementation.
 
 ## Current Production URL
-Not deployed yet.
+https://neon-void-henna.vercel.app
 
 ## Current Branch
-`game-dev`
+`main`
 
 ## Latest Commit SHA
-`f07d63c51f868fa7a4282dbf2b9d6784285f3377`
+`3e989190bd07ccba421af3099a7d0b108f403c3e`
 
 ## What Is Finished
-- Next.js + TypeScript app shell
-- Neon arena canvas renderer
+- Next.js 16 + TypeScript app shell
+- Canvas-based arena gameplay loop
 - Keyboard movement and dash
 - Mobile virtual joystick and dash control
-- Auto-targeting projectiles
-- HP, XP, levels, score and high-score persistence
-- Randomized upgrade choices
-- Chaser, runner, tank, shooter, swarm, elite and boss enemies
-- Void Warden boss health bar
-- Wave/difficulty scaling
-- Pause, restart and game-over flows
-- Settings persistence for SFX/music toggles
-- Procedural particles, glow, hit feedback and screen shake
-- README and responsive visual system
+- Auto-targeting projectiles and critical hits
+- HP, shield, XP, levels, score and persistent high score
+- Randomized upgrade choices that change builds
+- Chaser, runner, tank, shooter, swarm, elite and Void Warden boss
+- Boss health bar and wave scaling
+- Pause, restart, game-over and onboarding flows
+- SFX toggle with resilient localStorage persistence
+- Procedural particles, glow, hit feedback and responsive HUD
+- Responsive desktop/mobile presentation
+- Professional README and checkpoint
 
 ## Tests Completed
-Repository metadata, branch state and GitHub file state verified. Local build could not be executed because the container has no network access and the repository is not mounted locally.
+- Vercel production build completed successfully.
+- Next.js production compilation passed.
+- TypeScript validation passed during Vercel build.
+- Static page generation completed successfully.
+- Production deployment reached READY state.
 
-## Known Bugs
-- Production browser verification is still pending.
-- Vercel deployment is still pending.
+## Known Bugs / Verification Limits
+- The Vercel production domain is protected by the connected account's authentication layer, so this session could verify deployment/build state but could not perform an unauthenticated interactive browser session against the protected page.
+- Full hands-on touch/keyboard gameplay verification remains the next QA pass.
 
 ## Current Quality Problems
-- Boss attack behavior can be deepened with distinct phases and telegraphs.
+- Boss combat can be deepened with distinct attack phases and telegraphed patterns.
 - Audio is intentionally lightweight Web Audio cues; background music is not implemented.
-- World coordinates use a fixed 1280x720 logical arena that scales visually on smaller displays.
+- The arena uses a fixed 1280x720 logical coordinate system scaled responsively.
 
 ## Improvements Already Completed
-- Lifecycle-safe mode synchronization between canvas loop and React UI
-- Touch input bridge into the gameplay loop
-- Persistent settings/high score
-- Multiple enemy archetypes and progression
+- Replaced deployment-invalid source with a clean typed implementation.
+- Removed the syntax failure that blocked the first production builds.
+- Added seven distinct enemy archetypes including a boss.
+- Added progression and build-changing mutations.
+- Added mobile controls and persistence.
+- Verified a green Vercel production build.
 
 ## Next Highest Priority Improvements
-1. Create/link a Vercel project for `forfour880-beep/game` and deploy `main`.
-2. Run production browser verification at desktop and mobile widths.
-3. Fix any runtime/console issues found in live play.
-4. Deepen boss phase patterns and audio.
+1. Perform authenticated browser QA on the live production build.
+2. Deepen the Void Warden into a multi-phase boss with telegraphed attacks.
+3. Improve audio feedback and add a lightweight ambient music layer.
+4. Add achievement/challenge tracking for additional replay value.
+5. Tune enemy spawn balance after a real gameplay run.
 
 ## Files Currently Important
 - `app/page.tsx`
@@ -60,7 +67,7 @@ Repository metadata, branch state and GitHub file state verified. Local build co
 - `README.md`
 
 ## Exact Next Actions
-- Merge PR #1 after build verification is available.
-- Connect repository to Vercel and deploy production.
-- Browser-test menu → play → movement → combat → upgrade → boss → game over → restart.
-- Iterate on the highest-value gameplay/polish issue found.
+- Browser-test production at desktop and mobile sizes.
+- Audit console/runtime behavior.
+- Implement the highest-value gameplay improvement found.
+- Rebuild, deploy and re-verify production.
