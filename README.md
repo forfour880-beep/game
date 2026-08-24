@@ -35,3 +35,6 @@ npm run build
 - `app/page.tsx` — game loop, entities, combat, progression and UI overlays
 - `app/globals.css` — responsive visual system and HUD/menu styling
 - `app/layout.tsx` — metadata and application shell
+
+## Deployment
+Production is intended for Vercel. Gameplay is client-side and requires no database or server API.
